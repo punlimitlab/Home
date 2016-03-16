@@ -21,7 +21,7 @@ You can easely prepare a running docker environment with docker Tools.
 docker pull punlimit/rpipunlimit
 docker run -t -d -p 80:5001 -e "server.urls=http://*:5001" punlimit/punlimit
 ```
-### Build and run PartsUnlimited ASP.NET website on Linux with Docker
+### Build and run PartsUnlimited ASP.NET website on Windows with Docker
 You will need a Windows Server 2016 CTP machine do try it. You can use the Microsoft quick start a Wincontainer environment compatible with docker. As this thread on Windows Container forum stated, we cannot push windows container image on docker hub. So we will have some extra steps.
 
 1. Build ASP.NET DNX image (our Dockerfile.base.windows. Microsoft has also build one, so you can just pull it)
