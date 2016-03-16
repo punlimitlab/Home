@@ -12,13 +12,13 @@ Docker ASP.NET Base image  [![Build from VSTS](https://img.shields.io/vso/build/
 You will need to prepare a running docker client and daemon on your Raspberry. Hypriot has a great [Getting Started](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/) to bring Docker on your Raspberry Pi.
 Once ready,you can run this two commands to run the site and access it on http://YourRaspeberryHost
 ```
-docker pull punlimit/rpipunlimit
+docker pull punlimitlab/rpipunlimit
 docker run -t -d -p 80:5000 punlimitlab/rpipunlimit
 ```
 ### Pull and run PartsUnlimited ASP.NET website on Linux with Docker
 You can easely prepare a running docker environment with docker Tools.
 ```
-docker pull punlimit/rpipunlimit
+docker pull punlimitlab/punlimit
 docker run -t -d -p 80:5001 -e "server.urls=http://*:5001" punlimitlab/punlimit
 ```
 ### Build and run PartsUnlimited ASP.NET website on Windows with Docker
