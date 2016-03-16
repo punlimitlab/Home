@@ -9,20 +9,20 @@ Docker ASP.NET Base image  [![Build from VSTS](https://img.shields.io/vso/build/
 
 ## Quick Start
 ### Pull and run PartsUnlimited ASP.NET website on Raspberry PI with Docker
-You will need to prepare a running docker client and daemon on your Raspberry. Hypriot has ready to use flash card for docker on RPIs.
+You will need to prepare a running docker client and daemon on your Raspberry. Hypriot has a great [Getting Started](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/) to bring Docker on your Raspberry Pi.
 Once ready,you can run this two commands to run the site and access it on http://YourRaspeberryHost
 ```
 docker pull punlimit/rpipunlimit
-docker run -t -d -p 80:5000 punlimit/rpipunlimit
+docker run -t -d -p 80:5000 punlimitlab/rpipunlimit
 ```
 ### Pull and run PartsUnlimited ASP.NET website on Linux with Docker
 You can easely prepare a running docker environment with docker Tools.
 ```
 docker pull punlimit/rpipunlimit
-docker run -t -d -p 80:5001 -e "server.urls=http://*:5001" punlimit/punlimit
+docker run -t -d -p 80:5001 -e "server.urls=http://*:5001" punlimitlab/punlimit
 ```
 ### Build and run PartsUnlimited ASP.NET website on Windows with Docker
-You will need a Windows Server 2016 CTP machine do try it. You can use the Microsoft quick start a Wincontainer environment compatible with docker. As this thread on Windows Container forum stated, we cannot push windows container image on docker hub. So we will have some extra steps.
+You will need a Windows Server 2016 CTP machine do try it. You can use the Microsoft [Azure Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/azure_setup) to set a Windows Container host for Docker. As this [thread](https://social.msdn.microsoft.com/Forums/en-US/1c695a0d-d039-4e21-9560-ba430d086d63/can-we-push-your-images-to-docker-hub?forum=windowscontainers) on Windows Container forum stated, we cannot push windows container image on docker hub. So we will have some extra steps.
 
 1. Build ASP.NET DNX image (our Dockerfile.base.windows. Microsoft has also build one, so you can just pull it)
 2. Publish the ASP.NET website (with no runtime or a Windows compatible one)
