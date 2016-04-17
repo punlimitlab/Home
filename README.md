@@ -4,7 +4,7 @@ Informations and example with PartsUnlimited ASP.NET web site on how to run ASP.
 PartsUnlimited website  [![Build from VSTS](https://img.shields.io/vso/build/punlimit/f0338caf-c189-45e3-bcfa-abdd23fc6e9d/13.svg)](https://punlimit.visualstudio.com/DefaultCollection/_apis/public/build/definitions/f0338caf-c189-45e3-bcfa-abdd23fc6e9d/13/badge)
   RPI image [![RPI Downloads from Docker Hub](https://img.shields.io/docker/pulls/punlimitlab/rpipunlimit.svg)](https://registry.hub.docker.com/u/punlimitlab/rpipunlimit)  Linux image [![Downloads from Docker Hub](https://img.shields.io/docker/pulls/punlimitlab/punlimit.svg)](https://registry.hub.docker.com/u/punlimitlab/punlimit)
 
-Docker ASP.NET Base image  [![Build from VSTS](https://img.shields.io/vso/build/punlimit/f0338caf-c189-45e3-bcfa-abdd23fc6e9d/8.svg)](https://punlimit.visualstudio.com/DefaultCollection/_apis/public/build/definitions/f0338caf-c189-45e3-bcfa-abdd23fc6e9d/8/badge)
+ASP.NET RPI image  [![Build from VSTS](https://img.shields.io/vso/build/punlimit/f0338caf-c189-45e3-bcfa-abdd23fc6e9d/8.svg)](https://punlimit.visualstudio.com/DefaultCollection/_apis/public/build/definitions/f0338caf-c189-45e3-bcfa-abdd23fc6e9d/8/badge)
 [![RPI Downloads from Docker Hub](https://img.shields.io/docker/pulls/punlimitlab/aspnetbase.svg)](https://registry.hub.docker.com/u/punlimitlab/aspnetbase)
 
 ## Quick Start
