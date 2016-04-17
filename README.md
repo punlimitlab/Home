@@ -23,17 +23,14 @@ docker run -t -d -p 80:5001 -e "server.urls=http://*:5001" punlimitlab/punlimit
 ```
 ### Build and run PartsUnlimited ASP.NET website on Windows with Docker
 You will need a Windows Server 2016 CTP machine do try it. You can use the Microsoft [Azure Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/azure_setup) to set a Windows Container host for Docker. As this [thread](https://social.msdn.microsoft.com/Forums/en-US/1c695a0d-d039-4e21-9560-ba430d086d63/can-we-push-your-images-to-docker-hub?forum=windowscontainers) on Windows Container forum stated, we cannot push windows container image on docker hub. So we will have some extra steps.
-
 1. Build ASP.NET DNX image (our Dockerfile.base.windows. Microsoft has also build one, so you can just pull it)
 2. Publish the ASP.NET website (with no runtime or a Windows compatible one)
 3. Build the ASP.NET website image from the ASP.NET DNX image. (our Dockerfile.windows)
 
-## You can also access our running PartsUnlimited websites on Docker in Microsoft Azure VMs
+### You can also access our running PartsUnlimited websites on Docker in Microsoft Azure VMs
 Check on the bottom page to see difference on running OS and ASP.NET DNX runtimes.
-
 1. Linux Ubuntu/Mono runtime : http://dockubvm.westeurope.cloudapp.azure.com
 2. Windows 10.0/Core Clr 2016 : http://dockwinvm.westeurope.cloudapp.azure.com
 
-## You can also access our running PartsUnlimited website on Azure Container Service
-
+### You can also access our running PartsUnlimited website on Azure Container Service
 1. Linux Ubuntu/Mono runtime : http://mesospunlimitagents.westeurope.cloudapp.azure.com/
