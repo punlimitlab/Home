@@ -22,7 +22,7 @@ docker pull punlimitlab/punlimit
 docker run -t -d -p 80:5001 -e "server.urls=http://*:5001" punlimitlab/punlimit
 ```
 ### Build and run PartsUnlimited ASP.NET website on Windows with Docker
-You will need a Windows Server 2016 CTP machine do try it. You can use the Microsoft [Azure Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/azure_setup) to set a Windows Container host for Docker. As this [thread](https://social.msdn.microsoft.com/Forums/en-US/1c695a0d-d039-4e21-9560-ba430d086d63/can-we-push-your-images-to-docker-hub?forum=windowscontainers) on Windows Container forum stated, we cannot push windows container image on docker hub. So we will have some extra steps.
+You will need a Windows Server 2016 CTP machine do try it. You can use the Microsoft [Azure Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/azure_setup) to set a Windows Container host for Docker. As this [thread](https://social.msdn.microsoft.com/Forums/en-US/1c695a0d-d039-4e21-9560-ba430d086d63/can-we-push-your-images-to-docker-hub?forum=windowscontainers) on Windows Container forum stated, we cannot push windows container image on docker hub. So we will have some extra steps. It is now possible to [push windows images on Docker Hub](https://blog.docker.com/2016/04/docker-windows-server-tp5/) this will be updated soon.
 1. Build ASP.NET DNX image (our Dockerfile.base.windows. Microsoft has also build one, so you can just pull it)
 2. Publish the ASP.NET website (with no runtime or a Windows compatible one)
 3. Build the ASP.NET website image from the ASP.NET DNX image. (our Dockerfile.windows)
@@ -33,5 +33,11 @@ Check on the bottom page to see difference on running OS and ASP.NET DNX runtime
 1. Linux Ubuntu/Mono runtime : http://dockubvm.westeurope.cloudapp.azure.com
 2. Windows 10.0/Core Clr 2016 : http://dockwinvm.westeurope.cloudapp.azure.com
 
-### You can also access our running PartsUnlimited website on Azure Container Service
-1. Linux Ubuntu/Mono runtime : http://mesospunlimitagents.westeurope.cloudapp.azure.com/
+### You can also access our running PartsUnlimited website on Azure Container Service and Docker Cloud
+1. Azure Container Service Mesos/Marathon cluster with Linux Ubuntu VMs : http://mesospunlimitagents.westeurope.cloudapp.azure.com/
+2. Docker Cloud cluster with Linux Ubuntu VMs running in Azure : http://dockubuntu.cloudapp.net/
+Deploy your own :
+1. Azure Container Service: use our [Marathon with json file](https://github.com/punlimitlab/Docker/blob/master/Marathon.punlimit.Linux.json), click on this button and choose DC/OS: 
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-acs-dcos%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+2. Docker Cloud : [use our yaml file](https://github.com/punlimitlab/Docker/blob/master/docker-cloud.yml), click on this button:
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/punlimitlab/Docker)
